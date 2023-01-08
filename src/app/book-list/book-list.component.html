@@ -1,0 +1,19 @@
+<div>
+
+  <div><H2>Header</H2></div>
+<!--  <div>-->
+<!--    {{ bookList | json }}-->
+<!--    <ul>-->
+<!--      <li *ngFor="let book of bookList">{{ book.name }}</li>-->
+<!--    </ul>-->
+<!--  </div>-->
+
+  <hr>
+
+  <mat-grid-list [cols]="cols" rowHeight="100px" gutterSize="16px" *ngIf="bookList.length > 0">
+    <mat-grid-tile *ngFor="let book of bookList">
+      <app-book [book]="book"></app-book>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</div>
